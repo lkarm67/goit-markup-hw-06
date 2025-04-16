@@ -13,7 +13,7 @@
 </head>
   <body>
     
-    <header class="header-page">
+   <header class="header-page">
       <div class="container header-container">
         <nav class="header-nav">
           <a class="header-logo" 
@@ -49,6 +49,85 @@
             </li>
           </ul>
         </address>
+        <button class="burger-btn"
+        type="button">
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>          
+        </button>
+      </div>
+      <div class="mobil-menu">
+        <div class="container mobil-menu-container">
+          <button type="button" 
+                class="mobil-close-btn">
+            <svg class="mobil-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close">
+              </use>
+            </svg>      
+          </button>
+          <nav class="mobil-menu-nav">
+            <ul class="mobil-menu-nav-list">
+              <li class="mobil-menu-nav-item">
+                <a class="mobil-menu-nav-link current" 
+                   href="./index.html">Studio</a>
+              </li>
+              <li class="mobil-menu-nav-item">
+                <a class="mobil-menu-nav-link" 
+                   href="">Portfolio</a>
+              </li>
+              <li class="mobil-menu-nav-item">
+                <a class="mobil-menu-nav-link" 
+                   href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="mobil-address">
+            <ul class="mobil-address-list">
+              <li class="mobil-address-item">
+                <a class="mobil-address-link" 
+                   href="mailto:info@devstudio.com">info@devstudio.com
+                </a>
+              </li>
+              <li class="mobil-address-item">
+                <a class="mobil-address-link" 
+                   href="tel:+110001111111">+11 (000) 111-11-11
+                </a>
+              </li>
+            </ul>
+          </address>
+          <div>
+            <ul class="social-links-list">
+              <li class="icon-item">
+                <a href="" target="_blank" class="social-link">
+                  <svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon-item">              
+                <a href="" target="_blank" class="social-link">  
+                  <svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon-item">    
+                <a href="" target="_blank" class="social-link">
+                  <svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon-item">
+                <a href="" target="_blank" class="social-link">
+                  <svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>  
+            </ul>
+          </div>
+        </div>
       </div>  
     </header>
     <main>
@@ -119,7 +198,8 @@ problem to walk away with the perfect and creative solution.
         <h2 class="team-page-title">Our Team</h2>
             <ul class="team-list">
                 <li class="team-item">
-                  <img src="./images/photo-1.jpg" alt="Mark Guerrero" width="264"/>
+                  <img srcset="./images/team/photo-1.jpg 1x, ./images/team/photo-1@2x.jpg"
+                  src="./images/team/photo-1.jpg" alt="Mark Guerrero" width="264"/>
                   <div class="team-text-box">
                     <h3 class="team-subtitle">Mark Guerrero</h3>
                     <p class="team-descr">Product Designer</p>
@@ -157,7 +237,8 @@ problem to walk away with the perfect and creative solution.
                   </div>
                 </li>
                 <li class="team-item">
-                  <img src="./images/photo-2.jpg" alt="Tom Ford" width="264"/>
+                  <img srcset="./images/team/photo-2.jpg 1x, ./images/team/photo-2@2x.jpg"
+                  src="./images/photo-2.jpg" alt="Tom Ford" width="264"/>
                   <div class="team-text-box">
                     <h3 class="team-subtitle">Tom Ford</h3>
                     <p class="team-descr">Frontend Developer</p>
@@ -194,7 +275,8 @@ problem to walk away with the perfect and creative solution.
                   </div>
                 </li>
                 <li class="team-item">  
-                  <img src="./images/photo-3.jpg" alt="Camila Garcia" width="264"/>
+                  <img srcset="./images/team/photo-3.jpg 1x, ./images/team/photo-3@2x.jpg"
+                  src="./images/photo-3.jpg" alt="Camila Garcia" width="264"/>
                   <div class="team-text-box">  
                     <h3 class="team-subtitle">Camila Garcia</h3>
                       <p class="team-descr">Marketing</p>
@@ -231,7 +313,8 @@ problem to walk away with the perfect and creative solution.
                   </div>
                 </li>
                 <li class="team-item">
-                  <img src="./images/photo-4.jpg" alt="Daniel Wilson" width="264"/>
+                  <img srcset="./images/team/photo-4.jpg 1x, ./images/team/photo-4@2x.jpg"
+                  src="./images/photo-4.jpg" alt="Daniel Wilson" width="264"/>
                   <div class="team-text-box">
                     <h3 class="team-subtitle">Daniel Wilson</h3>
                     <p class="team-descr">UI Designer</p>
@@ -278,7 +361,18 @@ problem to walk away with the perfect and creative solution.
         <ul class="portfolio-list">
             <li class="portfolio-item">
               <div class="picture-wrap">
-                <img src="./images/portfolio-1.jpg" alt="Banking app's interface" width="360"/>
+                <picture>
+                  <source media="min-width: 1158px"
+                  srcset="./images/portfolio/portfolio-desc-1-min.jpg 1x, ./images/portfolio/portfolio-desc-1@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 768px"
+                  srcset="./images/portfolio/portfolio-tab-1-min.jpg 1x, ./images/portfolio/portfolio-tab-1@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 320px"
+                  srcset="./images/portfolio/portfolio-mob-1-min.jpg 1x, ./images/portfolio/portfolio-mob-1@2x.jpg 2x"
+                  />   
+                  <img src="./images/portfolio/portfolio-desk-1-min.jpg" alt="Banking app's interface" width="360"/>
+                </picture>
                 <p class="portfolio-p overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
               </div>    
                 
@@ -290,7 +384,18 @@ problem to walk away with the perfect and creative solution.
             </li>
             <li class="portfolio-item">
               <div class="picture-wrap">
-                <img src="./images/portfolio-2.jpg" alt="Payment by QR-code" width="360"/>
+                <picture>
+                  <source media="min-width: 1158px"
+                  srcset="./images/portfolio/portfolio-desc-2-min.jpg 1x, ./images/portfolio/portfolio-desc-2@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 768px"
+                  srcset="./images/portfolio/portfolio-tab-2-min.jpg 1x, ./images/portfolio/portfolio-tab-2@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 320px"
+                  srcset="./images/portfolio/portfolio-mob-2-min.jpg 1x, ./images/portfolio/portfolio-mob-2@2x.jpg 2x"
+                  />   
+                  <img src="./images/portfolio/portfolio-desk-2-min.jpg" alt="Payment by QR-code" width="360"/>
+                </picture>
                 <p class="portfolio-p overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
               </div>
               <div class="portfolio-text-box">
@@ -300,8 +405,19 @@ problem to walk away with the perfect and creative solution.
             </li>
             <li class="portfolio-item">
               <div class="picture-wrap">
-                <img src="./images/portfolio-3.jpg" alt="Meditation App's interface" width="360"/>
-                <p class="portfolio-p overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
+                <picture>
+                  <source media="min-width: 1158px"
+                  srcset="./images/portfolio/portfolio-desc-3-min.jpg 1x, ./images/portfolio/portfolio-desc-3@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 768px"
+                  srcset="./images/portfolio/portfolio-tab-3-min.jpg 1x, ./images/portfolio/portfolio-tab-3@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 320px"
+                  srcset="./images/portfolio/portfolio-mob-3-min.jpg 1x, ./images/portfolio/portfolio-mob-3@2x.jpg 2x"
+                  />   
+                  <img src="./images/portfolio/portfolio-desk-3-min.jpg" alt="Meditation App's interface" width="360"/>
+                </picture>
+                  <p class="portfolio-p overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
               </div>
               <div class="portfolio-text-box">
                 <h3 class="portfolio-subtitle">Meditation App</h3>
@@ -310,7 +426,18 @@ problem to walk away with the perfect and creative solution.
             </li>
             <li class="portfolio-item">
               <div class="picture-wrap">
-                <img src="./images/portfolio-4.jpg" alt="Taxi driver" width="360"/>
+                <picture>
+                  <source media="min-width: 1158px"
+                  srcset="./images/portfolio/portfolio-desc-4-min.jpg 1x, ./images/portfolio/portfolio-desc-4@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 768px"
+                  srcset="./images/portfolio/portfolio-tab-4-min.jpg 1x, ./images/portfolio/portfolio-tab-4@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 320px"
+                  srcset="./images/portfolio/portfolio-mob-4-min.jpg 1x, ./images/portfolio/portfolio-mob-4@2x.jpg 2x"
+                  />   
+                  <img src="./images/portfolio/portfolio-desk-4-min.jpg" alt="Taxi driver" width="360"/>
+                </picture>
                 <p class="portfolio-p overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
               </div>
               <div class="portfolio-text-box">
@@ -320,7 +447,18 @@ problem to walk away with the perfect and creative solution.
             </li>
             <li class="portfolio-item">
               <div class="picture-wrap">
-                <img src="./images/portfolio-5.jpg" alt="Phone's screen Illustrations" width="360"/> 
+                <picture>
+                  <source media="min-width: 1158px"
+                  srcset="./images/portfolio/portfolio-desc-5-min.jpg 1x, ./images/portfolio/portfolio-desc-5@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 768px"
+                  srcset="./images/portfolio/portfolio-tab-5-min.jpg 1x, ./images/portfolio/portfolio-tab-5@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 320px"
+                  srcset="./images/portfolio/portfolio-mob-5-min.jpg 1x, ./images/portfolio/portfolio-mob-5@2x.jpg 2x"
+                  />   
+                  <img src="./images/portfolio/portfolio-desk-5-min.jpg" alt="Phone's screen Illustrations" width="360"/> 
+                </picture>
                 <p class="portfolio-p overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
               </div>
                 <div class="portfolio-text-box">
@@ -330,7 +468,18 @@ problem to walk away with the perfect and creative solution.
             </li>
             <li class="portfolio-item">
               <div class="picture-wrap">
-                <img src="./images/portfolio-6.jpg" alt="Girl with phone" width="360"/>
+                <picture>
+                  <source media="min-width: 1158px"
+                  srcset="./images/portfolio/portfolio-desc-6-min.jpg 1x, ./images/portfolio/portfolio-desc-6@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 768px"
+                  srcset="./images/portfolio/portfolio-tab-6-min.jpg 1x, ./images/portfolio/portfolio-tab-6@2x-min.jpg 2x"
+                  />
+                  <source media="min-width: 320px"
+                  srcset="./images/portfolio/portfolio-mob-6-min.jpg 1x, ./images/portfolio/portfolio-mob-6@2x.jpg 2x"
+                  />   
+                  <img src="./images/portfolio/portfolio-desk-6-min.jpg" alt="Girl with phone" width="360"/>
+                </picture>
                 <p class="portfolio-p overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
               </div>
               <div class="portfolio-text-box">
@@ -403,7 +552,7 @@ problem to walk away with the perfect and creative solution.
       </div>
     </footer>
     
-    <div class="backdrop is-open">
+<!--    <div class="backdrop is-open">
       <div class="modal">
         <button type="button" 
                 class="modal-close-btn">
@@ -464,14 +613,17 @@ problem to walk away with the perfect and creative solution.
                   </use>
                 </svg>
               </span>
+              <span class="text-link-span">
             I accept the terms and conditions of the
-              <a class="modal-form-checkbox-link" href="">Privacy Policy</a>
+                <a class="modal-form-checkbox-link" href="">Privacy Policy</a>
+              </span>
             </label>
+            
           </div>
           <button class="modal-send-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
-
+-->  
   </body>
 </html>
