@@ -58,9 +58,9 @@ button{
     cursor: pointer;
 }
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 768px){
     .container{
-        max-width: 760px;    
+        max-width: 768px;    
     }
 }
 
@@ -82,7 +82,6 @@ button{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:16px;
 }
 
 .menu-nav-list,
@@ -106,7 +105,9 @@ button{
 }
 
 .burger-btn{
-    padding: 0;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
     border: none;
     fill: 2f2f37;
     background-color: transparent;
@@ -195,7 +196,7 @@ button{
 }
 
 @media screen and (min-width: 1158px) {
-     .header-logo{
+    .header-logo{
         margin-right: 76px;
     }
     
@@ -696,7 +697,7 @@ gap: 72px;
     }
 
     .team-item{
-        calc((100% - 24px) / 2);
+        width: ((100% - 24px) / 2);
     }
 }
 
@@ -984,6 +985,10 @@ gap: 72px;
 
 
 @media screen and (min-width: 768px) {
+    .footer-page{
+        padding-left: 108px;
+    }
+    
     .footer-logo-box{
         text-align: left;
     }
@@ -1010,8 +1015,9 @@ gap: 72px;
 
 @media screen and (min-width: 1158px) {
     .footer-page{
-        padding-top: 120px;
-        padding-bottom: 120px;
+        padding-left: 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 
     .footer-container{
@@ -1019,7 +1025,7 @@ gap: 72px;
         align-items: baseline;
         flex-wrap: nowrap;
         gap: 0;
-    }
+    }    
 
     .footer-logo-box{
         margin-right: 120px;
