@@ -1,7 +1,8 @@
+const mobileMenu = document.querySelector(".mobil-menu");
+
 document.addEventListener("DOMContentLoaded", () => {
   // ===== BURGER =====
   const burgerBtn = document.querySelector(".burger-btn");
-  const mobileMenu = document.querySelector(".mobil-menu");
   const closeBtn = document.querySelector(".mobil-close-btn");
 
   if (burgerBtn && mobileMenu && closeBtn) {
@@ -13,6 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.remove("is-open");
     });
   }
+
+  // 🔥 закриття при кліку на пункт меню
+  const menuLinks = document.querySelectorAll(".mobil-menu-nav-link");
+
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("is-open");
+
+      if (link.classList.contains("js-open-modal")) {
+        e.preventDefault();
+
+        setTimeout(() => {
+          openModal();
+        }, 300); // час анімації
+      }
+    });
+  });
 });
 
 // ===== MODAL =====
