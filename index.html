@@ -26,11 +26,12 @@
             </li>
             <li class="menu-nav-item">
               <a class="menu-nav-link" 
-                 href="">Portfolio</a>
+                 href="#portfolio">Portfolio</a>
             </li>
             <li class="menu-nav-item">
-              <a class="menu-nav-link" 
-                 href="">Contacts</a>
+              <a class="menu-nav-link js-open-modal" href="#" aria-haspopup="dialog">
+                Contacts
+              </a>
             </li>
           </ul>
         </nav>
@@ -73,11 +74,11 @@
               </li>
               <li class="mobil-menu-nav-item">
                 <a class="mobil-menu-nav-link" 
-                   href="">Portfolio</a>
+                   href="#portfolio">Portfolio</a>
               </li>
               <li class="mobil-menu-nav-item">
                 <a class="mobil-menu-nav-link" 
-                   href="">Contacts</a>
+                   href="#contacts">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -133,10 +134,10 @@
     <main>
     <section class="hero-page">
       <div class="container">
-          <h1 class="hero-page-title">Effective Solutions
-                for Your Business</h1>
-          <button type="button" class="hero-page-button">
-                  Order Service</button>                
+          <h1 class="hero-page-title">Effective Solutions for Your Business</h1>
+          <button type="button" class="hero-page-button js-open-modal-btn">
+            Order Service
+          </button>                
       </div>            
     </section>
 
@@ -238,7 +239,7 @@ problem to walk away with the perfect and creative solution.
                 </li>
                 <li class="team-item">
                   <img srcset="./images/team/photo-2.jpg 1x, ./images/team/photo-2@2x.jpg"
-                  src="./images/photo-2.jpg" alt="Tom Ford" width="264"/>
+                  src="./images/team/photo-2.jpg" alt="Tom Ford" width="264"/>
                   <div class="team-text-box">
                     <h3 class="team-subtitle">Tom Ford</h3>
                     <p class="team-descr">Frontend Developer</p>
@@ -276,7 +277,7 @@ problem to walk away with the perfect and creative solution.
                 </li>
                 <li class="team-item">  
                   <img srcset="./images/team/photo-3.jpg 1x, ./images/team/photo-3@2x.jpg"
-                  src="./images/photo-3.jpg" alt="Camila Garcia" width="264"/>
+                  src="./images/team/photo-3.jpg" alt="Camila Garcia" width="264"/>
                   <div class="team-text-box">  
                     <h3 class="team-subtitle">Camila Garcia</h3>
                       <p class="team-descr">Marketing</p>
@@ -314,7 +315,7 @@ problem to walk away with the perfect and creative solution.
                 </li>
                 <li class="team-item">
                   <img srcset="./images/team/photo-4.jpg 1x, ./images/team/photo-4@2x.jpg"
-                  src="./images/photo-4.jpg" alt="Daniel Wilson" width="264"/>
+                  src="./images/team/photo-4.jpg" alt="Daniel Wilson" width="264"/>
                   <div class="team-text-box">
                     <h3 class="team-subtitle">Daniel Wilson</h3>
                     <p class="team-descr">UI Designer</p>
@@ -355,7 +356,7 @@ problem to walk away with the perfect and creative solution.
       </div>
     </section>
 
-    <section class="portfolio-page">
+    <section id="portfolio" class="portfolio-page">
       <div class="container portfolio-container">
         <h2 class="portfolio-page-title">Our Portfolio</h2>
         <ul class="portfolio-list">
@@ -493,7 +494,7 @@ problem to walk away with the perfect and creative solution.
         
     </main>
     
-    <footer class="footer-page">
+    <footer id="contacts" class="footer-page">
       <div class="container footer-container">
         <div class="footer-logo-box">
           <a class="footer-logo"  
@@ -552,57 +553,57 @@ problem to walk away with the perfect and creative solution.
       </div>
     </footer>
     
-    <div class="backdrop">
-      <div class="modal">
-        <button type="button" 
-                class="modal-close-btn">
+    <div class="backdrop is-hidden" data-modal>
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        tabindex="-1"
+      >
+        <button 
+          type="button" 
+          class="modal-close-btn"
+          aria-label="Close modal"
+        >
           <svg class="modal-close-icon" width="8" height="8">
-            <use href="./images/icons.svg#icon-close">
-            </use>
+            <use href="./images/icons.svg#icon-close"></use>
           </svg>      
         </button>
-        <p class="modal-title">Leave your contacts and we will call you back
+        <p class="modal-title">
+          Leave your contacts and we will call you back
         </p>
         <form class="modal-form">
           <div class="user-field">
-            <label class="user-label" for="user-name">Name
-            </label>
+            <label class="user-label" for="user-name">Name</label>
             <div class="input-wrap">
               <input class="modal-form-input" type="text" name="user-name" id="user-name"/> 
               <svg class="modal-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-person">
-                </use>
+                <use href="./images/icons.svg#icon-person"></use>
               </svg> 
             </div>
           </div>
           <div class="user-field">
-            <label class="user-label" for="user-phone">Phone
-            </label>
+            <label class="user-label" for="user-phone">Phone</label>
             <div class="input-wrap">
               <input class="modal-form-input" type="text" name="user-phone" id="user-phone"/> 
               <svg class="modal-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-phone">
-                </use>
+                <use href="./images/icons.svg#icon-phone"></use>
               </svg> 
             </div>
           </div>
           <div class="user-field">
-            <label class="user-label" for="user-email">Email
-            </label>
+            <label class="user-label" for="user-email">Email</label>
             <div class="input-wrap">
               <input class="modal-form-input" type="email" name="user-email" id="user-email"/> 
               <svg class="modal-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-email">
-                </use>
+                <use href="./images/icons.svg#icon-email"></use>
               </svg> 
             </div>
           </div>
           <div class="user-field-comment">
-            <label class="user-label" for="user-comment">
-              Comment
-            </label>
-              <textarea class="modal-form-textarea" id="user-comment" name="user-comment" placeholder="Text input"
-              ></textarea>
+            <label class="user-label" for="user-comment">Comment</label>
+              <textarea class="modal-form-textarea" id="user-comment" name="user-comment" placeholder="Text input"></textarea>
           </div>
           <div class="modal-form-checkbox">
             <input class="modal-checkbox visually-hidden" type="checkbox"  id="user-privacy" value="true" name="user-privacy"/>
@@ -614,7 +615,7 @@ problem to walk away with the perfect and creative solution.
                 </svg>
               </span>
               <span class="text-link-span">
-            I accept the terms and conditions of the
+                I accept the terms and conditions of the
                 <a class="modal-form-checkbox-link" href="">Privacy Policy</a>
               </span>
             </label>
