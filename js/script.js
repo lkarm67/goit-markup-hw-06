@@ -1,24 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // ===== BURGER =====
   const burgerBtn = document.querySelector(".burger-btn");
   const mobileMenu = document.querySelector(".mobil-menu");
   const closeBtn = document.querySelector(".mobil-close-btn");
 
-  console.log({ burgerBtn, mobileMenu, closeBtn });
-  console.log("burger:", document.querySelector(".burger-btn"));
-  console.log("menu:", document.querySelector(".mobil-menu"));
-  console.log("close:", document.querySelector(".mobil-close-btn"));
+  if (burgerBtn && mobileMenu && closeBtn) {
+    burgerBtn.addEventListener("click", () => {
+      mobileMenu.classList.add("is-open");
+    });
 
-  if (!burgerBtn || !mobileMenu || !closeBtn) return;
-
-  burgerBtn.addEventListener("click", () => {
-    mobileMenu.classList.add("is-open");
-  });
-
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("is-open");
-  });
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("is-open");
+    });
+  }
 });
 
+// ===== MODAL =====
 const backdrop = document.querySelector("[data-modal]");
 const modal = document.querySelector(".modal");
 const openButtons = document.querySelectorAll(".js-open-modal, .js-open-modal-btn");
@@ -26,14 +23,14 @@ const closeBtn = document.querySelector(".modal-close-btn");
 
 let lastFocusedElement = null;
 
-/* -------------------------
-   OPEN MODAL
---------------------------*/
 function openModal() {
   lastFocusedElement = document.activeElement;
 
   backdrop.classList.add("is-open");
   document.body.style.overflow = "hidden"; // LOCK SCROLL
+
+  // 🔥 закриваємо моб меню якщо відкрите
+    mobileMenu?.classList.remove("is-open");
 
   // focus first element
   setTimeout(() => {
