@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const burgerBtn = document.querySelector(".burger-btn");
+  const mobileMenu = document.querySelector(".mobil-menu");
+  const closeBtn = document.querySelector(".mobil-close-btn");
+
+  console.log({ burgerBtn, mobileMenu, closeBtn });
+  console.log("burger:", document.querySelector(".burger-btn"));
+  console.log("menu:", document.querySelector(".mobil-menu"));
+  console.log("close:", document.querySelector(".mobil-close-btn"));
+
+  if (!burgerBtn || !mobileMenu || !closeBtn) return;
+
+  burgerBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("is-open");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("is-open");
+  });
+});
+
 const backdrop = document.querySelector("[data-modal]");
 const modal = document.querySelector(".modal");
 const openButtons = document.querySelectorAll(".js-open-modal, .js-open-modal-btn");
