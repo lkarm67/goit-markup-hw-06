@@ -15,6 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ===== ACTIVE LINK 🔥 =====
+  const navLinks = document.querySelectorAll(".menu-nav-link");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("current"));
+      link.classList.add("current");
+    });
+  });
+
   // 🔥 закриття при кліку на пункт меню
   const menuLinks = document.querySelectorAll(".mobil-menu-nav-link");
 

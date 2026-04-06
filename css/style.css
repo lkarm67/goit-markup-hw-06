@@ -3,6 +3,7 @@ body{
     color: #434455;
     background-color: #ffffff;
     transform: capitalize;
+    padding-top: 80px; /* висота header */
 }
 
 ul, ol{
@@ -73,6 +74,11 @@ button{
 
 /*--Header--*/
 .header-page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     background: #fff;
@@ -134,7 +140,7 @@ button{
     }
 
     .menu-nav-link{
-        display: block;
+        display: inline-block;
         padding: 24px 0;
         font-weight: 500;
         font-size: 16px;
